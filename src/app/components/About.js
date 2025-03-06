@@ -40,7 +40,7 @@ export default function About() {
                 height={300}
                 className={styles.aboutVideo}
               >
-                <source src="/gd.mp4" controls>
+                <source src="/gd.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
