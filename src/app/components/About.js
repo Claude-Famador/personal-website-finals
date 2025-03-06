@@ -30,7 +30,16 @@ export default function About() {
               </p>
             </div>
             <div className={styles.videoBlock}>
-              <video src="/gd.mp4" controls>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls
+                width={500}
+                height={300}
+                className={styles.aboutVideo}
+              >
                 <source src="/gd.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
