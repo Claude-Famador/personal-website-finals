@@ -55,16 +55,16 @@ export default function About() {
               </p>
             </div>
             <div className={styles.imageBlock}>
-              <Image
-                src="/wip.jpg"
-                alt="WIP"
-                width={400}
-                height={250}
-                loading="lazy"
-                className={styles.aboutImage}
-                placeholder="blur"
-                blurDataURL="https://fakeimg.pl/600x400"
-              />
+            <Image
+              src="https://raw.githubusercontent.com/Claude-Famador/personal-website-finals/main/public/wip.jpg"
+              alt="WIP"
+              width={400}
+              height={250}
+              loading="lazy"
+              className={styles.aboutImage}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg=="
+            />
             </div>
           </div>
 
@@ -80,7 +80,7 @@ export default function About() {
             </div>
             <div className={styles.imageBlock}>
               <Image
-                src="public/defense.jpg"
+                src="/defense.jpg"
                 alt="Journey"
                 width={400}
                 height={250}

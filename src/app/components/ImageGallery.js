@@ -5,13 +5,13 @@ import Image from 'next/image';
 import styles from './ImageGallery.module.css';
 
 const images = [
-    { src: 'Claude-Famador/personal-website-finals/public/image1.jpg', alt: 'Gallery Image 1' },
-    { src: 'Claude-Famador/personal-website-finals/public/image2.jpg', alt: 'Gallery Image 2' },
-    { src: 'Claude-Famador/personal-website-finals/public/image3.jpg', alt: 'Gallery Image 3' },
-    { src: 'Claude-Famador/personal-website-finals/public/jaiden.jpg', alt: 'Gallery Image 4' },
-    { src: 'Claude-Famador/personal-website-finals/public/minecwaft.jpg', alt: 'Gallery Image 5' },
-    { src: 'Claude-Famador/personal-website-finals/public/image6.jpg', alt: 'Gallery Image 6' },
-    { src: 'Claude-Famador/personal-website-finals/public/image7.jpg', alt: 'Gallery Image 7' },
+    { src: '/image1.jpg', alt: 'Gallery Image 1' },
+    { src: '/image2.jpg', alt: 'Gallery Image 2' },
+    { src: '/image3.jpg', alt: 'Gallery Image 3' },
+    { src: '/jaiden.jpg', alt: 'Gallery Image 4' },
+    { src: '/minecwaft.jpg', alt: 'Gallery Image 5' },
+    { src: '/image6.jpg', alt: 'Gallery Image 6' },
+    { src: '/image7.jpg', alt: 'Gallery Image 7' },
 ];
 
 export default function ImageGallery() {
