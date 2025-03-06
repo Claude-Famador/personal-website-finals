@@ -1,28 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true
-  },
+  output: 'standalone',
   images: {
-    unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'fakeimg.pl',
-      }
-    ]
+    domains: ['fakeimg.pl'],
+    unoptimized: true
   },
   webpack: (config) => {
     config.module.rules.push({
-      test: /\.(mp4|webm)$/,
-      use: {
-        loader: 'file-loader',
-        options: {
-          publicPath: '/_next/static/media/',
-          outputPath: 'static/media/',
-          name: '[name].[hash].[ext]',
-        },
-      },
+      test: /\.(mp4|webm|gif|mp3|wav|woff|woff2|eot|ttf|otf)$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'static/media/[hash][ext][query]'
+      }
     });
     return config;
   }

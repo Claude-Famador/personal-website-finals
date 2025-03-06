@@ -40,7 +40,7 @@ export default function About() {
                 height={300}
                 className={styles.aboutVideo}
               >
-                <source src="/gd.mp4" type="video/mp4" />
+                <source src="/static/media/gd.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -56,7 +56,7 @@ export default function About() {
             </div>
             <div className={styles.imageBlock}>
               <Image
-                src="/wip.jpg"
+                src="/static/media/wip.jpg"
                 alt="WIP"
                 width={400}
                 height={250}
@@ -80,7 +80,7 @@ export default function About() {
             </div>
             <div className={styles.imageBlock}>
               <Image
-                src="/defense.jpg"
+                src="/static/media/defense.jpg"
                 alt="Journey"
                 width={400}
                 height={250}
@@ -104,7 +104,7 @@ export default function About() {
             </div>
             <div className={styles.imageBlock}>
               <Image
-                src="/PURINNN.jpg"
+                src="/static/media/PURINNN.jpg"
                 alt="Skills"
                 width={400}
                 height={250}
