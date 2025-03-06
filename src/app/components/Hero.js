@@ -25,7 +25,7 @@ export default function Hero() {
         <div className={styles.imageContainer}>
           <div className={styles.imageWrapper}>
             <Image
-              src="/profile.jpg"
+              src="Claude-Famador/personal-website-finals/public/profile.jpg"
               alt="Profile picture"
               width={400}
               height={400}
