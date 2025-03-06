@@ -80,7 +80,7 @@ export default function About() {
             </div>
             <div className={styles.imageBlock}>
               <Image
-                src="/defense.jpg"
+                src="public/defense.jpg"
                 alt="Journey"
                 width={400}
                 height={250}
