@@ -1,0 +1,336 @@
+.comments {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+  backdrop-filter: blur(4px);
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #55CDFC, #F7A8B8);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.commentForm:focus-within {
+  transform: translateY(-5px);
+}
+
+.commentForm input,
+.commentForm textarea {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.commentForm textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.commentForm input:focus,
+.commentForm textarea:focus {
+  outline: none;
+  border-color: #55CDFC;
+  box-shadow: 0 0 0 2px rgba(85, 205, 252, 0.2);
+}
+
+.commentForm button {
+  padding: 1rem;
+  background: linear-gradient(45deg, #55CDFC, #F7A8B8);
+  color: #000;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.commentForm button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(85, 205, 252, 0.3);
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.commentItem {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.commentItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(31, 38, 135, 0.2);
+}
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.userInfo, .timeInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.userIcon, .clockIcon {
+  color: #55CDFC;
+}
+
+.timestamp {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+
+.commentActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: flex-end;
+}
+
+.editButton, .deleteButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.editButton {
+  background: rgba(85, 205, 252, 0.2);
+  color: #55CDFC;
+}
+
+.deleteButton {
+  background: rgba(247, 168, 184, 0.2);
+  color: #F7A8B8;
+}
+
+.editButton:hover, .deleteButton:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+  .comments {
+    padding: 2rem 1rem;
+  }
+  
+  .commentHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+.commentForm input:focus,
+.commentForm textarea:focus {
+  outline: none;
+  border-color: #55CDFC;
+  box-shadow: 0 0 0 2px rgba(85, 205, 252, 0.2);
+}
+
+.commentForm button {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(-45deg, #55CDFC, #F7A8B8, #FFFFFF, #F7A8B8, #55CDFC);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #333;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.commentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.commentItem {
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.commentItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(31, 38, 135, 0.1);
+}
+
+.commentItem h4 {
+  margin: 0 0 0.8rem 0;
+  color: #55CDFC;
+  font-size: 1.1rem;
+}
+
+.commentItem p {
+  margin: 0 0 0.8rem 0;
+  line-height: 1.6;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+}
+.commentActions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.commentActions button {
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(-45deg, #55CDFC, #F7A8B8, #FFFFFF, #F7A8B8, #55CDFC);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  color: #333;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.commentActions button:hover {
+  background-color: #e8f0ff;
+  box-shadow: 0 0 10px rgba(160, 200, 255, 0.5);
+  transform: translateY(-1px);
+}
+
+.commentActions button:active {
+  transform: translateY(1px);
+  box-shadow: 0 0 5px rgba(160, 200, 255, 0.3);
+}
+
+.commentActions button:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 6px;
+  background: linear-gradient(45deg, #e8f0ff, #f0f8ff, #e0f0ff);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.commentActions button:hover:before {
+  opacity: 1;
+}
+
+.commentForm button[type="button"] {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
+.editForm input,
+.editForm textarea {
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.editForm input:focus,
+.editForm textarea:focus {
+  outline: none;
+  border-color: #55CDFC;
+  box-shadow: 0 0 0 2px rgba(85, 205, 252, 0.2);
+}
+
+.editActions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+
+.editActions button {
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.editActions button:first-child {
+  background: linear-gradient(-45deg, #55CDFC, #F7A8B8, #FFFFFF, #F7A8B8, #55CDFC);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #333;
+  border: none;
+}
+
+.editActions button:last-child {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: inherit;
+}
+.editActions button:last-child {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}

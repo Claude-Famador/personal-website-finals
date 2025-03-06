@@ -1,0 +1,90 @@
+.divider {
+  margin: 0;  /* Remove vertical margin */
+  padding: 2rem 0;
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dividerContent {
+  width: 50%;  /* Increased width for better visual flow */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1;
+}
+
+.glowCircle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  filter: blur(20px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.glowCircle:nth-child(1) {
+  left: 20%;
+  top: -50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
+}
+
+.glowCircle:nth-child(2) {
+  right: 20%;
+  bottom: -50%;
+  animation-delay: -3s;
+  background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, transparent 70%);
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%,
+    var(--foreground) 50%,
+    transparent 100%
+  );
+  animation: glow 2s ease-in-out infinite;
+  opacity: 0.7;  /* Slightly reduced opacity */
+}
+
+.diamond {
+  height: 0.8rem;  /* Slightly smaller diamond */
+  width: 0.8rem;
+  transform: rotate(45deg);
+  border: 2px solid var(--foreground);
+  animation: rotate 4s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(20px) scale(1.1);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(405deg);
+  }
+}
