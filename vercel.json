@@ -1,13 +1,19 @@
 {
-  "headers": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*).mp4",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "video/mp4"
-        }
-      ]
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": { "cache-control": "public, max-age=31536000, immutable" },
+      "continue": true
+    },
+    {
+      "handle": "filesystem"
     }
   ]
 }
