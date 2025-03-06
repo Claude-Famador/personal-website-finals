@@ -56,7 +56,7 @@ export default function About() {
             </div>
             <div className={styles.imageBlock}>
             <img
-              src="/wip.jpg"
+              src="/wip.png"
               alt="WIP"
               width={400}
               height={250}
