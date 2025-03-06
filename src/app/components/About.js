@@ -55,16 +55,19 @@ export default function About() {
               </p>
             </div>
             <div className={styles.imageBlock}>
-              <Image
-                src="/wip.jpg"
-                alt="WIP"
-                width={400}
-                height={250}
-                loading="lazy"
-                className={styles.aboutImage}
-                placeholder="blur"
-                blurDataURL="https://fakeimg.pl/600x400"
-              />
+            <Image
+              src="/wip.jpg"
+              alt="WIP"
+              width={400}
+              height={250}
+              loading="lazy"
+              className={styles.aboutImage}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg=="
+              onError={(e) => {
+                console.error('Image failed to load:', e);
+              }}
+            />
             </div>
           </div>
 
