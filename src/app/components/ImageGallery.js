@@ -5,13 +5,13 @@ import Image from 'next/image';
 import styles from './ImageGallery.module.css';
 
 const images = [
-    { src: '/static/media/image1.jpg', alt: 'Gallery Image 1' },
-    { src: '/static/media/image2.jpg', alt: 'Gallery Image 2' },
-    { src: '/static/media/image3.jpg', alt: 'Gallery Image 3' },
-    { src: '/static/media/jaiden.jpg', alt: 'Gallery Image 4' },
-    { src: '/static/media/minecwaft.jpg', alt: 'Gallery Image 5' },
-    { src: '/static/media/image6.jpg', alt: 'Gallery Image 6' },
-    { src: '/static/media/image7.jpg', alt: 'Gallery Image 7' },
+    { src: '/image1.jpg', alt: 'Gallery Image 1' },
+    { src: '/image2.jpg', alt: 'Gallery Image 2' },
+    { src: '/image3.jpg', alt: 'Gallery Image 3' },
+    { src: '/jaiden.jpg', alt: 'Gallery Image 4' },
+    { src: '/minecwaft.jpg', alt: 'Gallery Image 5' },
+    { src: '/image6.jpg', alt: 'Gallery Image 6' },
+    { src: '/image7.jpg', alt: 'Gallery Image 7' },
 ];
 
 export default function ImageGallery() {
